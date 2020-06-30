@@ -2,7 +2,7 @@
 Simple realization of UrlShortener service (only add URL and redirect requests, and filesystem storage). 
 Full version of [url-shortener repository](https://github.com/nikolai/urlshortener).
 
-## Running
+## Running,
 1. Run Spring Boot application `./mvnw spring-boot:run`
 2. You need file [local JSON request file](./create-req.json) for this step. 
 Send request `curl -X POST -d "@create-req.json" -H "Content-Type: application/json" http://localhost:8080/create`
@@ -22,7 +22,8 @@ Just send HTTP POST to localhost:8080/config with JSON payload like:
 ```
 
 ## Experimental performance problems
-Modify [application properties file](./src/main/resources/application.properties) for this step. Send request `curl -X POST -d "@create-req.json" -H "Content-Type: application/json" http://localhost:8080/create`
+Modify [application properties file](./src/main/resources/application.properties) for this step.
+Send request `curl -X POST -d "@create-req.json" -H "Content-Type: application/json" http://localhost:8080/create`
 Some useful properties for performance problems demonstration:
  1. show.memory.leakage - shows OutOfMemoryError
  2. show.bad.synchronization - unnecessary synchronizations 
